@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/curl
 
 currentVersion="0.0.1"
 
