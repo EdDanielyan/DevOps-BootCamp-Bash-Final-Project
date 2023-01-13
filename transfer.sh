@@ -28,7 +28,7 @@ function singleDowload() {
              -v  Get the tool version
            Examples:
                ./transfer.sh test.txt .. ./transfer.sh -d ./test Mij6ca test.txt";;
-        v) echo "0.0.1";;
+        v) echo "1.23.0";;
           
         esac
     done
