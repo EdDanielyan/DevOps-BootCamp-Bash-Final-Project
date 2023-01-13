@@ -1,6 +1,5 @@
 #!/bin/bash
 
-currentVersion="0.0.1"
 
 function singleDowload() {
 
