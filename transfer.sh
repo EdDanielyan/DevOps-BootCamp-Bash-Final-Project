@@ -11,7 +11,7 @@ function singleDowload() {
 
 # function for printing download response
     function printDownloadResponse(){
-         singleDowload $1 $2 $3 
+         singleDowload "$1" "$2" "$3" 
          echo "Success!"  
     }
 
@@ -19,7 +19,7 @@ function singleDowload() {
     while getopts "d:hv" flag; do
         case $flag in
     d) echo "Downloading $4" 
-               printDownloadResponse $4 $3 $2
+               printDownloadResponse "$4" "$3" "$2"
               ;;
     h) echo "Description: Bash tool to transfer files from the command line.
            Usage:
