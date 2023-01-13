@@ -5,7 +5,7 @@
 # function for downloading single file
 function singleDowload() {
 
-        response=$(curl --progress-bar https://transfer.sh/$(basename "$2")/$(basename "$1") -o "$3/$1")
+        response=$(curl --progress-bar https://transfer.sh/$"basename ""$2"""/$"basename ""$1""" -o "$3/$1")
 
     }
 
@@ -40,7 +40,7 @@ function singleDowload() {
         for i in "$@"
             do
                 echo "Uploading $i"
-                response=$(curl --progress-bar --upload-file "$i" https://transfer.sh/$(basename "$i"));
+                response=$(curl --progress-bar --upload-file "$i" https://transfer.sh/$"basename ""$i"" ");
                 echo "Transfer File URL: $response"
             done
     fi
