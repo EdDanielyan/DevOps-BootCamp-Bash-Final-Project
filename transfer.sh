@@ -1,17 +1,21 @@
 #!/bin/bash
 
+# transfer.sh - script for uploading and downloading files
 
+# function for downloading single file
 function singleDowload() {
 
         response=$(curl --progress-bar https://transfer.sh/$(basename "$2")/$(basename "$1") -o "$3/$1")
 
     }
 
+# function for printing download response
     function printDownloadResponse(){
          singleDowload $1 $2 $3 
          echo "Success!"  
     }
 
+#check if any flag is specified 
     while getopts "d:hv" flag; do
         case $flag in
     d) echo "Downloading $4" 
@@ -30,7 +34,7 @@ function singleDowload() {
     done
 
 
-    
+# upload multiple files to    
     if [[ $1 != '-d' && $1 != '-v' &&  $1 != '-h' ]]
     then
         for i in "$@"
