@@ -1,5 +1,5 @@
 #!/bin/bash
-#shellcheck disable=SC1000-SC9999
+
 # transfer.sh - script for uploading and downloading files
 
 # function for downloading single file
